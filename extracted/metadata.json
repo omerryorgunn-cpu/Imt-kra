@@ -1,0 +1,8 @@
+{
+  "name": "Remix: İMTİKRA EN SON GÜNCELLEME ",
+  "description": "A comprehensive Arabic language exam preparation platform featuring AI assistance, student tracking, and administrative management.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İMTİKRA - Arapça Sınav Platformu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // CRITICAL FIX: Polyfill 'process' for browser environments to prevent SDK crashes
+      // We define it on window to ensure global availability before any module loads
+      if (typeof window !== 'undefined') {
+        window.process = {
+          env: {
+            NODE_ENV: 'development',
+            API_KEY: '' 
+          }
+        };
+      }
+
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'Roboto', 'sans-serif'],
+              serif: ['Playfair Display', 'Merriweather', 'serif'],
+              arabic: ['Amiri', 'Noto Sans Arabic', 'Tajawal', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Expanded Font Collection for Arabic & Turkish Support -->
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;800&family=El+Messiri:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;600&family=Inter:wght@300;400;500;600;700&family=Lateef:wght@400;700&family=Mada:wght@400;500;700&family=Merriweather:wght@300;400;700&family=Noto+Sans+Arabic:wght@300;400;600;800&family=Playfair+Display:wght@400;700&family=Readex+Pro:wght@300;400;600&family=Roboto:wght@300;400;500;700&family=Scheherazade+New:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { margin: 0; padding: 0; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
+        
+        :root {
+            transition: font-size 0.2s ease;
+        }
+    </style>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body class="transition-colors duration-300 font-sans text-base antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
