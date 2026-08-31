@@ -1,5 +1,5 @@
 
-import { User, Exam, Message, DirectMessage, ExamResult, Announcement, SiteSettings, Notification, ReadingText, PersonalWord, PlanConfig, SubscriptionRequest, VideoResource } from '../types';
+import { User, Exam, Message, DirectMessage, ExamResult, Announcement, SiteSettings, Notification, ReadingText, PersonalWord, PlanConfig, SubscriptionRequest, VideoResource, SupportTicket } from '../types';
 
 const STORAGE_KEY = 'imtikra_mock_db';
 
